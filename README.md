@@ -20,20 +20,28 @@ Level-2 (Proceed after finishing level 1 questions)
 ==============================================================================================================
 
 7-Authentication using JWT token
+
 8-Authorization
+
 9-Swagger
+
 10-Middleware for logging
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
- Expectations
+Expectations
 
 1-Follow SRP and make changes in the code
+
 2-Follow clean code architecture
+
 3-Rest standards are followed
+
 4-Test is not well written, expected to improve.
+
 5-Move List of movies to Repository/persistence layer
+
 6--Create interfaces for service layer and inject into controller
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
