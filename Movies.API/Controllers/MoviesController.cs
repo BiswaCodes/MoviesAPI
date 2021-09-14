@@ -24,7 +24,7 @@ namespace Movie.API.Controllers
 
         [HttpGet]
         [Route("/GetMovies")]
-        public IActionResult Get(PagingParams pagingParams)
+        public IActionResult Get([FromQuery]PagingParams pagingParams)
         {
             var res = _movieProvider.Get(pagingParams);   ;
             return Ok(res);
