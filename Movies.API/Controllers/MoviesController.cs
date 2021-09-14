@@ -23,20 +23,23 @@ namespace Movie.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get(int page)
+        [Route("/GetMovies")]
+        public IActionResult Get(PagingParams pagingParams)
         {
-            var res = _movieProvider.Get(page);   ;
+            var res = _movieProvider.Get(pagingParams);   ;
             return Ok(res);
         }
 
-        [HttpGet("Id:int")]
-        public async Task<IActionResult> GetMovieAsync(int Id)
-        {
-            var res = await _movieProvider.GetMovieAsync(Id);
-            return Ok(res);
-        }
+        ////[HttpGet("{Id}")]
+        ////[Route("/GetMovieAsync/{Id}")]
+        ////public async Task<IActionResult> GetMovieAsync(int Id)
+        ////{
+        ////    var res = await _movieProvider.GetMovieAsync(Id);
+        ////    return Ok(res);
+        ////}
 
         [HttpPost]
+        [Route("/AddMovies")]
         public IActionResult AddMovies([FromBody]MovieEntity movieEntity)
         { 
             return Ok(_movieProvider.AddMovies(movieEntity));

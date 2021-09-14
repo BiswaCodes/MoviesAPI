@@ -20,11 +20,11 @@ namespace Movies.API.Providers
             return movieEntity.Id;
         }
 
-        public IEnumerable<MovieEntity> Get(int page)
+        public IEnumerable<MovieEntity> Get(PagingParams pagingParams)
         {
             var existingMovies = this.ExistingMovies();
 
-            return existingMovies.Skip((page-1) * 10).Take(10);
+            return existingMovies.Skip((pagingParams.PageNumber -1) * pagingParams.PageSize).Take(pagingParams.PageSize);
         }
 
         public async Task<MovieEntity> GetMovieAsync(int Id)

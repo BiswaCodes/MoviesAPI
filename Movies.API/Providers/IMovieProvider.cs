@@ -8,7 +8,7 @@ namespace Movies.API.Providers
 {
     public interface IMovieProvider
     {
-        IEnumerable<MovieEntity> Get(int page);
+        IEnumerable<MovieEntity> Get(PagingParams pagingParams);
 
         Task<MovieEntity> GetMovieAsync(int Id);
 
