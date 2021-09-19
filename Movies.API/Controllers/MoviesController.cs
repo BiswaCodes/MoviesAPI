@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Movie.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("Api/[controller]")]
     public class MoviesController : ControllerBase
     {
         public static IEnumerable<MovieEntity> Movies { get; set; }
@@ -30,13 +30,13 @@ namespace Movie.API.Controllers
             return Ok(res);
         }
 
-        ////[HttpGet("{Id}")]
-        ////[Route("/GetMovieAsync/{Id}")]
-        ////public async Task<IActionResult> GetMovieAsync(int Id)
-        ////{
-        ////    var res = await _movieProvider.GetMovieAsync(Id);
-        ////    return Ok(res);
-        ////}
+        [HttpGet]
+        [Route("/GetMovieAsync")]
+        public async Task<IActionResult> GetMovieAsync(int Id)
+        {
+            var res = await _movieProvider.GetMovieAsync(Id);
+            return Ok(res);
+        }
 
         [HttpPost]
         [Route("/AddMovies")]
